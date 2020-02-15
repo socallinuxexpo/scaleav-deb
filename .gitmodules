@@ -1,0 +1,6 @@
+[submodule "opt/web-control-interface"]
+	path = opt/web-control-interface
+	url = https://github.com/socallinuxexpo/web-control-interface.git
+[submodule "opt/scale-switch"]
+	path = opt/scale-switch
+	url = https://github.com/LeStarch/scale-switch.git

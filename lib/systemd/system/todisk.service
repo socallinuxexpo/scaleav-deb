@@ -1,0 +1,14 @@
+[Unit]
+Description=A wrapper to dump OBS to disk for use with Scale AV. Go team!
+After=obs.service
+
+[Service]
+Type=forking
+PIDFile=/opt/obs/logs/todisk.pid
+ExecStart=/opt/obs/bin/todisk-wrapper
+ExecStop=-/sbin/start-stop-daemon --quiet --stop --retry QUIT/5 --pidfile /opt/obs/logs/todisk.pid
+TimeoutStopSec=5
+KillMode=mixed
+
+[Install]
+WantedBy=multi-user.target
