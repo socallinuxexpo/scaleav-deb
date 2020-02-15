@@ -3,6 +3,6 @@ mkdir -p /opt/obs/logs
 . /opt/obs/conf/obs.env
 DIR=`dirname $0`
 
-${DIR}/../../web-control-interface/bin/rtmp-to-file 2>&1 1>/opt/obs/logs/todisk.log & 
+${DIR}/../../web-control-interface/bin/rtmp-to-file "${LOG_URL}" 2>&1 1>/opt/obs/logs/todisk.log & 
 PID="$!"
 echo "${PID}" > /opt/obs/logs/todisk.pid
