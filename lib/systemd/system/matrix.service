@@ -1,0 +1,15 @@
+[Unit]
+Description=A wrapper to dump OBS to disk for use with Scale AV. Go team!
+After=obs.service
+
+[Service]
+Environment=PYTHONHOME=/opt/scaleavvenv
+Environment=PYTHONPATH=/opt/web-control-interface/hdmi_matrix_control
+Type=forking
+ExecStart=python3 -m hdmi_matrix_control.daemon
+ExecStop=
+TimeoutStopSec=5
+KillMode=mixed
+
+[Install]
+WantedBy=multi-user.target

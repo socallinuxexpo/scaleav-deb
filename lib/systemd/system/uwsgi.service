@@ -1,0 +1,14 @@
+[Unit]
+Description=A wrapper to dump OBS to disk for use with Scale AV. Go team!
+After=obs.service
+
+[Service]
+Environment=PYTHON_HOME=/opt/scaleavvenv
+Type=forking
+ExecStart=uwsgi --socket /tmp/uwsgi.sock --plugin python3 -w hdmi_matrix_control.web:app
+ExecStop=
+TimeoutStopSec=5
+KillMode=mixed
+
+[Install]
+WantedBy=multi-user.target
