@@ -4,9 +4,9 @@ After=obs.service
 
 [Service]
 Type=forking
-PIDFile=/opt/obs/logs/todisk.pid
-ExecStart=/opt/obs/bin/todisk-wrapper
-ExecStop=-/sbin/start-stop-daemon --quiet --stop --retry QUIT/5 --pidfile /opt/obs/logs/todisk.pid
+PIDFile=/var/run/scale/todisk.pid
+ExecStart=/opt/wrappers/todisk-wrapper
+ExecStop=-/sbin/start-stop-daemon --quiet --stop --retry QUIT/5 --pidfile /var/run/scale/todisk.pid
 TimeoutStopSec=5
 KillMode=mixed
 

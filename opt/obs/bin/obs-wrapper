@@ -1,6 +1,0 @@
-#!/bin/sh
-mkdir -p /opt/obs/logs
-. /opt/obs/conf/obs.env
-obs --startrecording 2>&1 1>/opt/obs/logs/obs.log & 
-PID="$!"
-echo "${PID}" > /opt/obs/logs/obs.pid

@@ -4,9 +4,9 @@ After=network.target
 
 [Service]
 Type=forking
-PIDFile=/opt/obs/logs/obs.pid
-ExecStart=/opt/obs/bin/obs-wrapper
-ExecStop=-/sbin/start-stop-daemon --quiet --stop --retry QUIT/5 --pidfile /opt/obs/logs/obs.pid
+PIDFile=/var/run/scale/obs.pid
+ExecStart=/opt/wrappers/obs-wrapper
+ExecStop=-/sbin/start-stop-daemon --quiet --stop --retry QUIT/5 --pidfile /var/run/scale/obs.pid
 TimeoutStopSec=5
 KillMode=mixed
 

@@ -1,13 +1,12 @@
 [Unit]
-Description=A wrapper to dump OBS to disk for use with Scale AV. Go team!
-After=obs.service
+Description=A wrapper to start the Matrix daemon.
+After=network.target
 
 [Service]
-Environment=PYTHONHOME=/opt/scaleavvenv
-Environment=PYTHONPATH=/opt/web-control-interface/hdmi_matrix_control
 Type=forking
-ExecStart=python3 -m hdmi_matrix_control.daemon
-ExecStop=
+PIDFile=/var/run/scale/matrix.pid
+ExecStart=/opt/wrappers/matrix-wrapper
+ExecStop=-/sbin/start-stop-daemon --quiet --stop --retry QUIT/5 --pidfile /var/run/scale/matrix.pid
 TimeoutStopSec=5
 KillMode=mixed
 

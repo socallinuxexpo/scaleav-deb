@@ -1,0 +1,3 @@
+#!/bin/bash
+. "${INSTALL}/conf/scale.env"
+start_proc "todisk" "${INSTALL}/web-control-interface/bin/rtmp-to-file"

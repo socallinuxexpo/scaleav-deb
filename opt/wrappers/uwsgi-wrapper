@@ -1,0 +1,3 @@
+#!/bin/bash
+. "${INSTALL}/conf/scale.env"
+start_proc "uwsgi" "uwsgi --socket /tmp/uwsgi.sock --plugin python3 -w hdmi_matrix_control.web:app"

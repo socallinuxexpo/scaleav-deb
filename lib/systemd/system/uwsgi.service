@@ -1,12 +1,12 @@
 [Unit]
-Description=A wrapper to dump OBS to disk for use with Scale AV. Go team!
-After=obs.service
+Description=A wrapper to start UWSGI.
+After=network.target
 
 [Service]
-Environment=PYTHON_HOME=/opt/scaleavvenv
 Type=forking
-ExecStart=uwsgi --socket /tmp/uwsgi.sock --plugin python3 -w hdmi_matrix_control.web:app
-ExecStop=
+PIDFile=/var/run/scale/uwsgi.pid
+ExecStart=/opt/wrappers/uwsgi-wrapper
+ExecStop=-/sbin/start-stop-daemon --quiet --stop --retry QUIT/5 --pidfile /var/run/scale/uwsgi.pid
 TimeoutStopSec=5
 KillMode=mixed
 

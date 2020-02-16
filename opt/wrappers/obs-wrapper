@@ -1,0 +1,4 @@
+#!/bin/sh
+. "${INSTALL}/conf/scale.env"
+
+start_proc "obs" "DISPLAY=${OBS_DISPLAY} obs --startrecording"
