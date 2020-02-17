@@ -1,0 +1,5 @@
+#!/bin/sh
+rm -rf /opt/obs/home
+rm -rf /opt/scaleavvenv
+rm -rf /opt/nginx/logs /opt/nginx/*_temp
+find /opt/web-control-interface -type d -name "__pycache__" -exec rm -rf {} +

@@ -1,4 +1,4 @@
 #!/bin/bash
-. "${INSTALL}/conf/scale.env"
+. "/opt/conf/scale.env"
 
 start_proc "matrix" "python3 -m hdmi_matrix_controller.daemon"

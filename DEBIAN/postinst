@@ -1,4 +1,5 @@
 #!/bin/sh
+mkdir -p /opt/nginx/logs
 mkdir -p /tmp/scaleav-2020
 python3 -m venv /opt/scaleavvenv
 . /opt/scaleavvenv/bin/activate
