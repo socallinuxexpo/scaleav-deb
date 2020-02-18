@@ -4,3 +4,4 @@ mkdir -p /tmp/scaleav-2020
 python3 -m venv /opt/scaleavvenv
 . /opt/scaleavvenv/bin/activate
 pip install --cache-dir /tmp/scaleav-2020 /opt/web-control-interface/hdmi_matrix_control/ platformio
+rm -r /.git
