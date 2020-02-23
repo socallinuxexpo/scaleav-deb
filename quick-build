@@ -1,0 +1,12 @@
+#!/bin/sh
+if [ $# -ne 3 ]
+then
+    echo "[ERROR] Supply 'Major Version', 'Minor Version', and 'Revisision' as numbers."
+    exit 1
+fi
+git submodule update --init --recursive
+DIR="./scaleav_$1.$2-$3"
+rm -rf "${DIR}"
+mkdir -p "${DIR}"
+cp -r "DEBIAN" "opt" "etc" "lib" "${DIR}"
+dpkg-deb -b "${DIR}"
