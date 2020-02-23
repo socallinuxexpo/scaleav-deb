@@ -7,9 +7,9 @@ This package contains the necessary setup to build a package for SCaLE AV.
 Build this package with `dpgk-deb`.  Current version is 1.0-2.
 
 ```
-git clone https://github.com/socallinuxexpo/scaleav-deb.git scaleav_1.0-2 
-git submodule update --init --recursive
-dpkg-deb --build scaleav_1.0-2/
+git clone https://github.com/socallinuxexpo/scaleav-deb.git
+cd scaleav-deb
+./quick-build 1 0 2
 ```
 
 ## Installing Package and Dependencies
