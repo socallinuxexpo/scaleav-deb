@@ -15,6 +15,10 @@ dpkg-deb --build scaleav_1.0-2/
 ## Installing Package and Dependencies
 
 ```
+sudo add-apt-repository ppa:obsproject/obs-studio
+sudo apt-get update
+sudo apt-get install obs-studio
+sudo apt-get install obs-websockets
 sudo apt install ./scaleav_1.0-2.deb
 ```
 
