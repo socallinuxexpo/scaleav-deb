@@ -2,7 +2,7 @@
 
 This package contains the necessary setup to build a package for SCaLE AV.
 
-## Building Debina PAckage
+## Building Debian Package
 
 Build this package with `dpgk-deb`.  Current version is 1.0-2.
 
