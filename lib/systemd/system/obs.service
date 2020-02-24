@@ -1,6 +1,9 @@
 [Unit]
 Description=A wrapper for OBS for use with Scale AV. Go team!
 After=nginx.service
+Requires=nginx.service
+After=display.service
+Requires=display.service
 
 [Service]
 Type=forking

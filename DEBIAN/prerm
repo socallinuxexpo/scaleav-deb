@@ -1,6 +1,12 @@
 #!/bin/sh
+systemctl stop uwsgi
+systemctl stop matrix
+systemctl stop todisk
+systemctl stop obs
+systemctl stop nginx
 rm -rf /opt/obs/home
 rm -rf /opt/scaleavvenv
 rm -rf /opt/nginx/logs /opt/nginx/*_temp
 rm -rf /var/run/scale /var/log/scale
 find /opt/web-control-interface -type d -name "__pycache__" -exec rm -rf {} +
+rm -rf /tmp/uwsgi.sock /tmp/matrix

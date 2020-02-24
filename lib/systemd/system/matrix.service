@@ -1,6 +1,7 @@
 [Unit]
 Description=A wrapper to start the Matrix daemon.
 After=network.target
+Requires=network.target
 
 [Service]
 User=www-data

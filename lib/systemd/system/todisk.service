@@ -1,6 +1,9 @@
 [Unit]
 Description=A wrapper to dump OBS to disk for use with Scale AV. Go team!
 After=obs.service
+Requires=obs.service
+After=nginx.service
+Requires=nginx.service
 
 [Service]
 User=www-data
@@ -11,6 +14,3 @@ ExecStart=/opt/wrappers/todisk-wrapper
 ExecStop=-/sbin/start-stop-daemon --quiet --stop --retry QUIT/5 --pidfile /var/run/scale/todisk.pid
 TimeoutStopSec=5
 KillMode=mixed
-
-[Install]
-WantedBy=multi-user.target

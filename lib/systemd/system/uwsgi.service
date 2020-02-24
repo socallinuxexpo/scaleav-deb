@@ -1,6 +1,9 @@
 [Unit]
 Description=A wrapper to start UWSGI.
 After=network.target
+Requires=network.target
+After=matrix.service
+Requires=matrix.service
 
 [Service]
 Type=forking

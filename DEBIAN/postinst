@@ -5,3 +5,4 @@ mkdir -p /var/run/scale
 mkdir -p /var/log/scale
 chown www-data:www-data /var/run/scale
 chown www-data:www-data /var/log/scale
+systemctl daemon-reload
