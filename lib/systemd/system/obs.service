@@ -3,8 +3,6 @@ Description=A wrapper for OBS for use with Scale AV. Go team!
 After=nginx.service
 
 [Service]
-User=www-data
-Group=www-data
 Type=forking
 PIDFile=/var/run/scale/obs.pid
 ExecStart=/opt/wrappers/obs-wrapper
