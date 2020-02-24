@@ -1,3 +1,6 @@
 #!/bin/bash
 . "/opt/conf/scale.env"
-start_proc "todisk" "${INSTALL}/web-control-interface/bin/rtmp-to-file ${RTMP_RELAY_URL} ${OBS_LOG_FILE}"
+TODAY_DIR="${OBS_REC_DIR}/$(date +"%Y-%m-%d")"
+FILENAME="${TODAY_DIR}/$(hostname)-$(date +"%H%M%S").mp4"
+mkdir -p "${TODAY_DIR}"
+start_proc "todisk" "${INSTALL}/web-control-interface/bin/rtmp-to-file ${RTMP_RELAY_URL} ${FILENAME}"

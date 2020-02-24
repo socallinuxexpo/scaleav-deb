@@ -3,7 +3,7 @@ Version: 1.0-2
 Section: base
 Priority: optional
 Architecture: amd64
-Depends: bash, debconf, ffmpeg, iproute2, libc6, libexpat1, libgd3, libgeoip1, libhiredis0.13, libluajit-5.1-2, libpam0g, libpcre3, libperl5.26, libssl1.1, libxml2, libxslt1.1, lsb-base, obs-studio, perl, python3, python3-pip, python3-venv, zlib1g, gstreamer1.0-tools, gstreamer1.0-plugins-good, gstreamer1.0-plugins-ugly, gstreamer1.0-plugins-bad, gstreamer1.0-libav, gstreamer1.0-vaapi
+Depends: bash, debconf, ffmpeg, iproute2, libc6, libexpat1, libgd3, libgeoip1, libhiredis0.13, libluajit-5.1-2, libpam0g, libpcre3, libperl5.26, libssl1.1, libxml2, libxslt1.1, lsb-base, obs-studio, perl, python3, python3-pip, python3-venv, zlib1g, gstreamer1.0-tools, gstreamer1.0-plugins-good, gstreamer1.0-plugins-ugly, gstreamer1.0-plugins-bad, gstreamer1.0-libav, gstreamer1.0-vaapi, avrdude
 Maintainer: Michael Starch <LeStarch@googlemail.com>
 Description: Scale AV Package
  Scale AV software stack in a Debian package, for fun and profit.
