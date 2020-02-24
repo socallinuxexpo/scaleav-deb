@@ -9,4 +9,5 @@ DIR="./scaleav_$1.$2-$3"
 rm -rf "${DIR}"
 mkdir -p "${DIR}"
 cp -r "DEBIAN" "opt" "etc" "lib" "${DIR}"
+find "${DIR}" -type d -name ".git*" -exec rm -rf {} +
 dpkg-deb -b "${DIR}"
