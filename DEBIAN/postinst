@@ -1,2 +1,7 @@
 #!/bin/sh
 mkdir -p /opt/nginx/logs
+usermod -a -G dialout www-data
+mkdir -p /var/run/scale
+mkdir -p /var/log/scale
+chown www-data:www-data /var/run/scale
+chown www-data:www-data /var/log/scale

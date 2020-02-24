@@ -3,6 +3,8 @@ Description=A wrapper to start the Matrix daemon.
 After=network.target
 
 [Service]
+User=www-data
+Group=www-data
 Type=forking
 PIDFile=/var/run/scale/matrix.pid
 ExecStart=/opt/wrappers/matrix-wrapper
