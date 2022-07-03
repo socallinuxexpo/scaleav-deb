@@ -4,12 +4,12 @@ This package contains the necessary setup to build a package for SCaLE AV.
 
 ## Building Debian Package
 
-Build this package with `dpgk-deb`.  Current version is 1.0-2.
+Build this package with `dpgk-deb`.  Current version is 1.0-3.
 
 ```
 git clone https://github.com/socallinuxexpo/scaleav-deb.git
 cd scaleav-deb
-./quick-build 1 0 2
+./quick-build 1 0 3
 ```
 
 ## Installing Package and Dependencies
@@ -19,7 +19,7 @@ sudo add-apt-repository ppa:obsproject/obs-studio
 sudo apt-get update
 sudo apt-get install obs-studio
 sudo apt-get install obs-websockets
-sudo apt install ./scaleav_1.0-2.deb
+sudo apt install ./scaleav_1.0-3.deb
 ```
 
 ## Post Installation Configuration
