@@ -4,8 +4,10 @@ then
     echo "[ERROR] Supply 'Major Version', 'Minor Version', and 'Revisision' as numbers."
     exit 1
 fi
+VERSION="$1.$2-$3"
+sed -i 's/Version: .*/Version: '${VERSION}'/' DEBIAN/control
 git submodule update --init --recursive
-DIR="./scaleav_$1.$2-$3"
+DIR="./scaleav_$VERSION"
 rm -rf "${DIR}"
 mkdir -p "${DIR}"
 cp -r "DEBIAN" "opt" "etc" "lib" "${DIR}"
